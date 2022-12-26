@@ -6,5 +6,10 @@ namespace GraphQlTest.Services.Interfaces
     {
         List<Product> GetAllProducts();
         Product GetProduct(int id);
+
+        Product AddProduct(Product product);
+        Product UpdateProduct(int id, Product product);
+
+        Product DeleteProduct(int id);
     }
 }

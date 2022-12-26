@@ -1,6 +1,7 @@
 using GraphiQl;
 using GraphQL.Server;
 using GraphQL.Types;
+using GraphQlTest.Mutations;
 using GraphQlTest.Queries;
 using GraphQlTest.Schemas;
 using GraphQlTest.Services;
@@ -25,6 +26,8 @@ namespace GraphQl
             builder.Services.AddTransient<IProductService, ProductService>();
             builder.Services.AddSingleton<ProductType>();
             builder.Services.AddSingleton<ProductQuery>();
+            builder.Services.AddSingleton<ProductMutation>();
+
             builder.Services.AddSingleton<ISchema, ProductSchema>();
             builder.Services.AddGraphQL(options =>
             {
